@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import "./index.css"
 
 
 const ACCESS_TOKEN = '3875372609247663'
@@ -16,15 +17,9 @@ const Hero = () => {
       const response = await fetch(`${DOMAIN}${ACCESS_TOKEN}/${id}`)
       
       const hero = await response.json()
-      history.push(`/hero/${hero.id}?hero=${hero.name}&image=${hero.image.url}`)
+      
+      history.push(`/HeroDetail/${hero.id}?name=${hero.name}&image=${hero.image.url}`)
       console.log('response', hero)
-     
-      document.write(`Nombre de heroe: ${hero.name} `)
-      document.write(`ID de heroe: ${hero.id} - `)
-      document.write(`Imagen: ${hero.image.url} - `)
-      document.write(`Ocupacion: ${hero.work.occupation}`)
-      
-      
     } catch (error) {
       console.log('error', error)
     }
@@ -38,13 +33,15 @@ const Hero = () => {
   
   
   return (
-    <div>
+    <div className="buscador">
       <input type="text" onChange={handleChange} /><br />
-      <button onClick={getHeros} >Buscar</button><br /><br />
-      Hero
+      <button onClick={getHeros} >Buscar</button> <br />
+      Ingrese un dígito para buscar al respectivo héroe.
     </div>
     
   )
 }
+
+
 
 export default Hero

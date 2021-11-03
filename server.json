@@ -1,0 +1,18 @@
+{
+    "personas":[
+        {
+            "id": 1,
+            "nombre":"Pepito",
+            "apelllido":"Marquez de la Torre",
+            "edad": "21",
+            "ciudad":"Ica"
+        },
+        {
+            "id": 2,
+            "nombre":"Pepito",
+            "apelllido":"Marquez de la Torre",
+            "edad": "21",
+            "ciudad":"Ica"
+        }
+    ]
+}
