@@ -1,3 +1,13 @@
 .imagen {
     width: 100px;
 }
+
+.generacion {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.nombresGenerador {
+    text-align: center;
+}

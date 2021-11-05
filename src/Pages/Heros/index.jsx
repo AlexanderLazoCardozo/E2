@@ -18,8 +18,9 @@ const Hero = () => {
       
       const hero = await response.json()
       
-      history.push(`/HeroDetail/${hero.id}?name=${hero.name}&image=${hero.image.url}`)
+      history.push(`/HeroDetail/${hero.id}?name=${hero.name}&image=${hero.image.url}&full-name=${hero.biography['full-name']}`)
       console.log('response', hero)
+      console.log('prueba',hero.biography["full-name"])
     } catch (error) {
       console.log('error', error)
     }

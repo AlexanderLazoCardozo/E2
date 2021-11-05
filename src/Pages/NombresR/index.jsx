@@ -16,7 +16,7 @@ const NombresR = () => {
         try {
             const response = await fetch (DOMAIN)
             const hero = await response.json()
-            history.push(`/HeroDetail/firstname=${hero.results[0].name.first}?lastname=${hero.results[0].name.last}&gender=${hero.results[0].gender}?location=${hero.results[0].location.country}&email=${hero.results[0].email}?picture=${hero.results[0].picture.large} `)
+            history.push(`/HeroDetail/?firstname=${hero.results[0].name.first}&lastname=${hero.results[0].name.last}&gender=${hero.results[0].gender}&location=${hero.results[0].location.country}&email=${hero.results[0].email}&picture=${hero.results[0].picture.large} `)
             console.log("NameRandom",hero.results[0])
             console.log("NameRandom",hero.results[0].picture.large)
         } catch (error){
@@ -27,9 +27,9 @@ const NombresR = () => {
 
     return (
         
-        <div>
+        <div className="buscador">
             
-            <button onClick={getName}>Generar (RANDOM) </button>
+            <button  onClick={getName}>Generar (RANDOM) </button>
             
         </div>
     )
